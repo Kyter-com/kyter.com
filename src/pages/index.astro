@@ -1,80 +1,94 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Kyter">
-	<main>
-		<!-- TODO: Add logo here -->
-		<h1>Kyter</h1>
-		<p class="instructions">
-			<!-- TODO: Make this the social media link section? -->
-			<code>Social Media Links coming-soon</code>
-		</p>
-		<ul role="list" class="link-card-grid">
-			<!-- TODO: Add icons into Card for logos -->
-			<Card
-				href="https://github.com/Kyter-com/vschn"
-				title="vschn"
-				body="Visual Studio Code extension for viewing HackerNews templated into coding languages"
-			/>
-			<Card
-				href="https://github.com/Kyter-com/chronoclip"
-				title="chronoclip"
-				body="Chrome extension for exploring timestamps and converting into other formats"
-			/>
-		</ul>
-	</main>
+  <main>
+    <!-- TODO: Add logo here -->
+    <h1>Kyter</h1>
+    <div class="links">
+      <a href="https://github.com/Kyter-com" target="_blank"
+        ><code>GitHub</code>
+      </a>
+      <a href="https://mastodon.social/@Kyter" target="_blank"
+        ><code>Mastodon</code>
+      </a>
+      <a href="https://x.com/Kyter_com" target="_blank"><code>X</code></a>
+    </div>
+    <ul role="list" class="link-card-grid">
+      <!-- TODO: Add icons into Card for logos -->
+      <Card
+        href="https://github.com/Kyter-com/vschn"
+        title="vschn"
+        body="Visual Studio Code extension for viewing HackerNews templated into coding languages"
+      />
+      <Card
+        href="https://github.com/Kyter-com/chronoclip"
+        title="chronoclip"
+        body="Chrome extension for exploring timestamps and converting into other formats"
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #25262b;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background-color: #25262b;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .links a {
+    text-decoration: underline;
+    color: #ffca43;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .links code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: #ffca43;
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .links strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
