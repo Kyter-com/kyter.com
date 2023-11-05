@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+![kyter-com-readme](https://github.com/Kyter-com/kyter.com/assets/38516489/084157e2-9348-4561-b653-616d3a909673)
 
 ```sh
 npm create astro@latest -- --template basics
