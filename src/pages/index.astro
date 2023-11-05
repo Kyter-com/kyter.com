@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import KyterIcon from "../components/icons/kyter.svg?raw";
 ---
 
 <Layout title="Kyter">
   <main>
-    <!-- TODO: Add logo here -->
-    <h1>Kyter</h1>
+    <div class="logo-container">
+      <Fragment set:html={KyterIcon} />
+      <h1>Kyter</h1>
+    </div>
     <div class="links">
       <a href="https://github.com/Kyter-com" target="_blank"
         ><code>GitHub</code>
@@ -75,7 +78,6 @@ import Card from "../components/Card.astro";
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
     color: #25262b;
   }
   .links {
@@ -109,5 +111,13 @@ import Card from "../components/Card.astro";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* Add space between the elements */
+    gap: 2rem;
   }
 </style>
