@@ -3,5 +3,3 @@
 ## About
 
 [kyter.com](https://kyter.com) landing page. Written in [Astro](https://astro.build) and hosted on [Cloudflare Pages](https://pages.cloudflare.com).
-
-TODO: Setup copyright footer with year
